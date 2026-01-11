@@ -1,0 +1,615 @@
+import { TestData } from "@/lib/types";
+
+export const tests: TestData[] = [
+    {
+        id: "standard-mbti",
+        title: "성격 유형 검사 (MBTI)",
+        description: "전 세계에서 가장 유명한 성격 검사! 12문항으로 알아보는 나의 타고난 성향 분석.",
+        thumbnailUrl: "https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?q=80&w=600&auto=format&fit=crop",
+        questions: [
+            // E vs I
+            {
+                id: "mbti_q1",
+                text: "주말에 시간이 생겼을 때 나는?",
+                options: [
+                    { id: "E", text: "친구들을 만나 에너지를 충전한다.", score: { E: 1 } },
+                    { id: "I", text: "집에서 혼자만의 시간을 가지며 쉰다.", score: { I: 1 } },
+                ],
+            },
+            {
+                id: "mbti_q2",
+                text: "파티나 모임에서 나는?",
+                options: [
+                    { id: "E", text: "많은 사람들과 어울리며 대화의 중심에 선다.", score: { E: 1 } },
+                    { id: "I", text: "친한 소수와 깊은 대화를 나누거나 조용히 관찰한다.", score: { I: 1 } },
+                ],
+            },
+            {
+                id: "mbti_q3",
+                text: "새로운 사람을 만나는 것은?",
+                options: [
+                    { id: "E", text: "흥미롭고 자극적인 일이다.", score: { E: 1 } },
+                    { id: "I", text: "조금 피곤하고 에너지가 소모되는 일이다.", score: { I: 1 } },
+                ],
+            },
+            // S vs N
+            {
+                id: "mbti_q4",
+                text: "나는 평소에?",
+                options: [
+                    { id: "S", text: "현재의 상황과 실제적인 경험에 집중한다.", score: { S: 1 } },
+                    { id: "N", text: "미래의 가능성과 아이디어를 상상한다.", score: { N: 1 } },
+                ],
+            },
+            {
+                id: "mbti_q5",
+                text: "설명서를 읽을 때 나는?",
+                options: [
+                    { id: "S", text: "꼼꼼하게 처음부터 끝까지 읽고 따라한다.", score: { S: 1 } },
+                    { id: "N", text: "대충 훑어보거나 감으로 먼저 시도해본다.", score: { N: 1 } },
+                ],
+            },
+            {
+                id: "mbti_q6",
+                text: "나무보다는 숲을 보는 편인가?",
+                options: [
+                    { id: "S", text: "아니오, 나무 하나하나의 디테일이 중요합니다.", score: { S: 1 } },
+                    { id: "N", text: "네, 전체적인 큰 그림을 먼저 봅니다.", score: { N: 1 } },
+                ],
+            },
+            // T vs F
+            {
+                id: "mbti_q7",
+                text: "친구가 고민을 털어놓을 때 나는?",
+                options: [
+                    { id: "T", text: "문제의 원인을 분석하고 해결책을 제시한다.", score: { T: 1 } },
+                    { id: "F", text: "친구의 감정에 공감하고 위로해준다.", score: { F: 1 } },
+                ],
+            },
+            {
+                id: "mbti_q8",
+                text: "의사결정을 내릴 때 더 중요한 것은?",
+                options: [
+                    { id: "T", text: "논리적인 인과관계와 객관적 사실", score: { T: 1 } },
+                    { id: "F", text: "나와 타인의 감정, 그리고 가치관", score: { F: 1 } },
+                ],
+            },
+            {
+                id: "mbti_q9",
+                text: "나를 더 화나게 하는 사람은?",
+                options: [
+                    { id: "T", text: "앞뒤가 안 맞는 비논리적인 사람", score: { T: 1 } },
+                    { id: "F", text: "배려심 없고 무례한 사람", score: { F: 1 } },
+                ],
+            },
+            // J vs P
+            {
+                id: "mbti_q10",
+                text: "여행 계획을 세울 때 나는?",
+                options: [
+                    { id: "J", text: "시간 단위로 꼼꼼하게 계획표를 짠다.", score: { J: 1 } },
+                    { id: "P", text: "왕복 티켓만 끊고 가서 생각한다.", score: { P: 1 } },
+                ],
+            },
+            {
+                id: "mbti_q11",
+                text: "책상 위나 방 상태는?",
+                options: [
+                    { id: "J", text: "항상 정돈되어 있고 물건이 제자리에 있다.", score: { J: 1 } },
+                    { id: "P", text: "다소 어지러워 보이지만 나름의 질서가 있다.", score: { P: 1 } },
+                ],
+            },
+            {
+                id: "mbti_q12",
+                text: "일이 계획대로 안 풀리면?",
+                options: [
+                    { id: "J", text: "스트레스를 받고 빠르게 대안을 찾으려 한다.", score: { J: 1 } },
+                    { id: "P", text: "그럴 수도 있지! 유연하게 대처한다.", score: { P: 1 } },
+                ],
+            },
+        ],
+        results: [
+            {
+                type: "ESTJ", title: "엄격한 관리자 (ESTJ)", traits: ["E", "S", "T", "J"],
+                description: "사물과 사람을 관리하는 데 뛰어난 능력을 지닌 관리자입니다. 현실적이며 구체적인 사실을 중시합니다.",
+                imageUrl: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=800&auto=format&fit=crop"
+            },
+            {
+                type: "INFP", title: "열정적인 중재자 (INFP)", traits: ["I", "N", "F", "P"],
+                description: "최악의 상황이나 악한 사람에게서도 긍정적인 면을 찾아내는 진정한 이상주의자입니다.",
+                imageUrl: "https://images.unsplash.com/photo-1493612276216-9c59019558f7?q=80&w=800&auto=format&fit=crop"
+            },
+            {
+                type: "ENFP", title: "재기발랄한 활동가 (ENFP)", traits: ["E", "N", "F", "P"],
+                description: "창의적이며 항상 웃을 거리를 찾아다니는 활발한 성격으로 사람들과 어울리기를 좋아합니다.",
+                imageUrl: "https://images.unsplash.com/photo-1543857778-c4a1a3e0b2eb?q=80&w=800&auto=format&fit=crop"
+            },
+            {
+                type: "ISTJ", title: "청렴결백한 논리주의자 (ISTJ)", traits: ["I", "S", "T", "J"],
+                description: "사실에 근거하여 사고하며 이들의 행동이나 결정 사항에 한 치의 의심을 사지 않는 현실주의자입니다.",
+                imageUrl: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=800&auto=format&fit=crop"
+            },
+            {
+                type: "ENTP", title: "뜨거운 논쟁을 즐기는 변론가 (ENTP)", traits: ["E", "N", "T", "P"],
+                description: "지적인 도전을 두려워하지 않는 똑똑한 호기심형입니다.",
+                imageUrl: "https://images.unsplash.com/photo-1557862921-37829c790f19?q=80&w=800&auto=format&fit=crop"
+            },
+            {
+                type: "ESFJ", title: "사교적인 외교관 (ESFJ)", traits: ["E", "S", "F", "J"],
+                description: "타인을 향한 세심한 관심과 사교적인 성향으로 인기가 많으며, 타인을 돕는데 열성적입니다.",
+                imageUrl: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=800&auto=format&fit=crop"
+            },
+            {
+                type: "INFJ", title: "선을 옹호하는 제창자 (INFJ)", traits: ["I", "N", "F", "J"],
+                description: "조용하고 신비로우며 샘솟는 영감으로 타인에게 영향을 줍니다.",
+                imageUrl: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=800&auto=format&fit=crop"
+            },
+            // Simplified mock fallback for others
+        ],
+    },
+    {
+        id: "love-mbti",
+        title: "연애 세포 생존 테스트",
+        description: "내 안의 연애 세포, 아직 살아있을까? 10문항으로 알아보는 나의 연애 스타일과 공략법!",
+        thumbnailUrl: "https://images.unsplash.com/photo-1518199266791-5375a83190b7?q=80&w=600&auto=format&fit=crop",
+        questions: [
+            {
+                id: "lq1",
+                text: "주말에 아무 약속이 없다면?",
+                options: [
+                    { id: "E", text: "심심해서 친구들에게 연락을 돌린다", score: { E: 1 } },
+                    { id: "I", text: "오예! 밀린 넷플릭스를 보며 뒹굴거린다", score: { I: 1 } },
+                ],
+            },
+            {
+                id: "lq2",
+                text: "소개팅에서 처음 만난 상대와 대화할 때 나는?",
+                options: [
+                    { id: "E", text: "어색한 건 못 참아! 내가 먼저 말을 건다", score: { E: 1 } },
+                    { id: "I", text: "상대가 말을 걸어주길 기다리며 리액션을 준비한다", score: { I: 1 } },
+                ],
+            },
+            {
+                id: "lq3",
+                text: "데이트 장소를 정할 때 나는?",
+                options: [
+                    { id: "J", text: "맛집, 카페, 동선까지 완벽하게 검색해둔다", score: { J: 1 } },
+                    { id: "P", text: "일단 만나서 기분 내키는 대로 간다", score: { P: 1 } },
+                ],
+            },
+            {
+                id: "lq4",
+                text: "연인이 우울하다고 할 때 나의 반응은?",
+                options: [
+                    { id: "T", text: "왜? 무슨 일 있었어? (해결책 탐색)", score: { T: 1 } },
+                    { id: "F", text: "헐ㅠㅠ 진짜 속상했겠다.. (감정 공감)", score: { F: 1 } },
+                ],
+            },
+            {
+                id: "lq5",
+                text: "연인과 싸운 후 화해할 때?",
+                options: [
+                    { id: "T", text: "논리적으로 잘잘못을 따지고 해결하고 싶다", score: { T: 1 } },
+                    { id: "F", text: "일단 미안하다고 하고 감정을 푼다", score: { F: 1 } },
+                ],
+            },
+            {
+                id: "lq6",
+                text: "기념일 선물 준비는?",
+                options: [
+                    { id: "J", text: "일주일 전부터 예약하고 준비한다", score: { J: 1 } },
+                    { id: "P", text: "당일에 가장 좋은 것을 골라 선물한다", score: { P: 1 } },
+                ],
+            },
+            {
+                id: "lq7",
+                text: "짝사랑 상대를 발견했을 때?",
+                options: [
+                    { id: "E", text: "직진! 대놓고 호감을 표시한다", score: { E: 1 } },
+                    { id: "I", text: "몰래 지켜보며 기회를 엿본다", score: { I: 1 } },
+                ],
+            },
+            {
+                id: "lq8",
+                text: "이상형에 가까운 사람은?",
+                options: [
+                    { id: "S", text: "센스 있고 현실감각 뛰어난 사람", score: { S: 1 } },
+                    { id: "N", text: "대화가 잘 통하고 꿈이 있는 사람", score: { N: 1 } },
+                ],
+            },
+            {
+                id: "lq9",
+                text: "이별 후 나는?",
+                options: [
+                    { id: "T", text: "바쁘게 지내며 잊으려 노력한다", score: { T: 1 } },
+                    { id: "F", text: "슬픈 노래를 들으며 실컷 운다", score: { F: 1 } },
+                ],
+            },
+            {
+                id: "lq10",
+                text: "다음 연애를 시작할 때?",
+                options: [
+                    { id: "J", text: "결혼까지 생각할 수 있는지 신중하게 본다", score: { J: 1 } },
+                    { id: "P", text: "지금 당장 좋으면 일단 만난다", score: { P: 1 } },
+                ],
+            },
+        ],
+        results: [
+            {
+                type: "ESTJ",
+                title: "현실주의 리더형 연애군주",
+                description: "연애도 계획적으로! 한번 내 사람이다 싶으면 확실하게 책임지는 스타일입니다. 밀당보다는 솔직한 표현을 선호하며, 약속 시간을 어기는 것을 매우 싫어합니다.",
+                traits: ["E", "S", "T", "J"],
+                imageUrl: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=800&auto=format&fit=crop"
+            },
+            {
+                type: "ISTJ",
+                title: "신중한 순정파",
+                description: "처음에는 낯을 가리지만 한번 마음을 열면 변치 않는 소나무 같은 사람. 가벼운 만남보다는 진지하고 오래가는 관계를 선호합니다.",
+                traits: ["I", "S", "T", "J"],
+                imageUrl: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=800&auto=format&fit=crop"
+            },
+            {
+                type: "ENFP",
+                title: "금사파 댕댕이",
+                description: "사람을 너무 좋아해서 금방 사랑에 빠지지만, 식는 것도 빠를 수 있어요! 항상 새로운 데이트와 자극을 원하며 함께 있으면 지루할 틈이 없습니다.",
+                traits: ["E", "N", "F", "P"],
+                imageUrl: "https://images.unsplash.com/photo-1543857778-c4a1a3e0b2eb?q=80&w=800&auto=format&fit=crop"
+            },
+            {
+                type: "INFP",
+                title: "몽글몽글 감성쟁이",
+                description: "사랑에 살고 사랑에 죽는 로맨티스트. 상대방의 감정을 섬세하게 캐치하지만, 상처받기도 쉬워요. 진심 어린 편지 한 통에 감동하는 타입입니다.",
+                traits: ["I", "N", "F", "P"],
+                imageUrl: "https://images.unsplash.com/photo-1518621736915-f3b1c41bfd00?q=80&w=800&auto=format&fit=crop"
+            },
+            {
+                type: "ENTP",
+                title: "플러팅 장인 매력쟁이",
+                description: "재치 있는 입담으로 상대를 사로잡는 매력의 소유자. 뻔한 데이트보다는 새롭고 자극적인 활동을 좋아합니다. 때로는 짓궂은 장난으로 애정을 표현하기도 하죠.",
+                traits: ["E", "N", "T", "P"],
+                imageUrl: "https://images.unsplash.com/photo-1517487881594-2787fef5ebf7?q=80&w=800&auto=format&fit=crop"
+            }
+        ],
+    },
+    {
+        id: "work-survival",
+        title: "직장인 생존 유형 테스트",
+        description: "나는 탕비실의 요정일까, 회의실의 스나이퍼일까? 10문항으로 알아보는 살벌한 오피스 생존 전략!",
+        thumbnailUrl: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=600&auto=format&fit=crop",
+        questions: [
+            {
+                id: "wq1",
+                text: "부장님이 썰렁한 아재개그를 했을 때 나는?",
+                options: [
+                    { id: "A", text: "물개박수를 치며 자지러진다.", score: { PRO: 1 } },
+                    { id: "B", text: "입꼬리만 살짝 올리며 어색한 미소를 짓는다.", score: { MYWAY: 1 } },
+                ],
+            },
+            {
+                id: "wq2",
+                text: "퇴근 10분 전, 급한 업무가 떨어졌다. 나의 행동은?",
+                options: [
+                    { id: "A", text: "'넵 알겠습니다!' 하고 야근을 불사한다.", score: { PRO: 1 } },
+                    { id: "B", text: "'내일 아침에 바로 처리하겠습니다' 하고 칼퇴한다.", score: { MYWAY: 1 } },
+                ],
+            },
+            {
+                id: "wq3",
+                text: "점심 메뉴를 고를 때 나는?",
+                options: [
+                    { id: "A", text: "'아무거나 괜찮아요~' 하고 대세를 따른다.", score: { PRO: 1 } },
+                    { id: "B", text: "'오늘 날씨엔 짬뽕이죠!' 하고 적극 추천한다.", score: { MYWAY: 1 } },
+                ],
+            },
+            {
+                id: "wq4",
+                text: "동료가 실수를 했을 때?",
+                options: [
+                    { id: "A", text: "조용히 처리해주고 나중에 알려준다.", score: { PRO: 1 } },
+                    { id: "B", text: "정확하게 지적하고 수정하라고 한다.", score: { MYWAY: 1 } },
+                ],
+            },
+            {
+                id: "wq5",
+                text: "회식 참여에 대한 나의 생각은?",
+                options: [
+                    { id: "A", text: "업무의 연장이다. 2차까지 필참!", score: { PRO: 1 } },
+                    { id: "B", text: "맛있는 거 먹으러 가는 건 좋지만 1차만.", score: { MYWAY: 1 } },
+                ],
+            },
+            {
+                id: "wq6",
+                text: "회의 시간에 내 의견과 다른 주장이 나오면?",
+                options: [
+                    { id: "A", text: "분위기를 보며 적당히 수긍한다.", score: { PRO: 1 } },
+                    { id: "B", text: "논리적으로 반박하며 내 의견을 피력한다.", score: { MYWAY: 1 } },
+                ],
+            },
+            {
+                id: "wq7",
+                text: "월요일 아침 출근길, 나의 기분은?",
+                options: [
+                    { id: "A", text: "이번 주도 화이팅! 긍정 회로를 돌린다.", score: { PRO: 1 } },
+                    { id: "B", text: "로또 당첨 번호를 다시 확인해본다.", score: { MYWAY: 1 } },
+                ],
+            },
+            {
+                id: "wq8",
+                text: "상사가 부당한 지시를 내린다면?",
+                options: [
+                    { id: "A", text: "일단 따르는 척하며 융통성 있게 처리한다.", score: { PRO: 1 } },
+                    { id: "B", text: "할 말은 해야 한다. 정중하게 거절한다.", score: { MYWAY: 1 } },
+                ],
+            },
+            {
+                id: "wq9",
+                text: "연봉 협상 시즌이 다가왔다. 나는?",
+                options: [
+                    { id: "A", text: "회사의 상황을 고려해 적당선을 제시한다.", score: { PRO: 1 } },
+                    { id: "B", text: "나의 성과를 데이터로 정리해 강력 어필한다.", score: { MYWAY: 1 } },
+                ],
+            },
+            {
+                id: "wq10",
+                text: "회사에서 가장 중요한 가치는?",
+                options: [
+                    { id: "A", text: "원만한 인간관계와 팀워크", score: { PRO: 1 } },
+                    { id: "B", text: "나의 커리어 성장과 보상", score: { MYWAY: 1 } },
+                ],
+            },
+        ],
+        results: [
+            {
+                type: "PRO",
+                title: "만렙 생존러: 카멜레온",
+                description: "어떤 상황에서도 살아남는 처세술의 달인. 상사의 기분을 귀신같이 파악하고 적절하게 맞장구칠 줄 압니다. 조직 생활에 최적화된 당신은 어디서든 사랑받는 감초 같은 존재!",
+                traits: ["사회생활만렙", "인간관계마스터"],
+                imageUrl: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop"
+            },
+            {
+                type: "MYWAY",
+                title: "마이웨이: 고독한 늑대",
+                description: "업무 능력은 확실하지만 불필요한 친목은 사절합니다. 워라밸을 중요시하며 자기 할 일은 완벽하게 해냅니다. 능력으로 승부하는 당신은 진정한 실력자!",
+                traits: ["칼퇴요정", "일잘러", "팩트폭격기"],
+                imageUrl: "https://images.unsplash.com/photo-1556157382-97eda2d622ca?q=80&w=800&auto=format&fit=crop"
+            }
+        ]
+    },
+    {
+        id: "zombie-survival",
+        title: "좀비 아포칼립스 생존 유형",
+        description: "부산행 열차에 탔다면 나는? 리더형 vs 배신자형 vs 짐덩어리형. 극한 상황에서의 본성을 확인하세요! (총 10문항)",
+        thumbnailUrl: "https://images.unsplash.com/photo-1509248961158-e54f6934749c?q=80&w=600&auto=format&fit=crop",
+        questions: [
+            {
+                id: "z1", text: "좀비 바이러스 뉴스가 속보로 떴다. 나의 반응은?",
+                options: [
+                    { id: "A", text: "가짜 뉴스겠지. 일단 출근한다.", score: { FIRST: 1 } },
+                    { id: "B", text: "마트로 달려가 생필품부터 사재기한다.", score: { LEADER: 1 } }
+                ]
+            },
+            {
+                id: "z2", text: "도망치던 중 넘어진 사람을 발견했다.",
+                options: [
+                    { id: "A", text: "일단 일으켜 세워서 같이 뛴다.", score: { LEADER: 1 } },
+                    { id: "B", text: "미안하지만 나부터 살고 봐야 한다.", score: { BETRAYER: 1 } }
+                ]
+            },
+            {
+                id: "z3", text: "숨어있던 마트 셔터가 내려가기 직전이다!",
+                options: [
+                    { id: "A", text: "다른 생존자가 더 없는지 소리쳐 확인한다.", score: { HERO: 1 } },
+                    { id: "B", text: "일단 내가 먼저 안으로 들어가고 셔터를 내린다.", score: { BETRAYER: 1 } }
+                ]
+            },
+            {
+                id: "z4", text: "좀비에게 물린 것 같은 친구가 괜찮다고 한다.",
+                options: [
+                    { id: "A", text: "혹시 모르니 밧줄로 묶어둔다.", score: { LEADER: 1 } },
+                    { id: "B", text: "친구 말을 믿고 감싸준다.", score: { FIRST: 1 } }
+                ]
+            },
+            {
+                id: "z5", text: "무기가 될만한 것을 발견했다. 무엇을 집을까?",
+                options: [
+                    { id: "A", text: "확실하게 제압할 수 있는 야구방망이", score: { LEADER: 1 } },
+                    { id: "B", text: "가볍고 숨기기 쉬운 과도", score: { BETRAYER: 1 } }
+                ]
+            },
+            {
+                id: "z6", text: "식량이 얼마 남지 않았다. 어떻게 할까?",
+                options: [
+                    { id: "A", text: "똑같이 배분하여 다 같이 버틴다.", score: { LEADER: 1 } },
+                    { id: "B", text: "내 몫을 몰래 조금 더 챙겨둔다.", score: { BETRAYER: 1 } }
+                ]
+            },
+            {
+                id: "z7", text: "밤에 이상한 소리가 들린다.",
+                options: [
+                    { id: "A", text: "무슨 일인지 확인하러 나간다.", score: { FIRST: 1 } },
+                    { id: "B", text: "죽은 척하고 조용히 있는다.", score: { BETRAYER: 1 } }
+                ]
+            },
+            {
+                id: "z8", text: "생존자 무리를 만났다. 합류할까?",
+                options: [
+                    { id: "A", text: "쪽수가 많아야 산다. 합류한다.", score: { FIRST: 1 } },
+                    { id: "B", text: "믿을 수 없다. 거리를 두고 지켜본다.", score: { LEADER: 1 } }
+                ]
+            },
+            {
+                id: "z9", text: "탈출 헬기가 도착했다! 자리가 하나뿐이라면?",
+                options: [
+                    { id: "A", text: "노약자나 아이에게 양보한다.", score: { FIRST: 1 } },
+                    { id: "B", text: "밀치고 내가 먼저 탄다.", score: { BETRAYER: 1 } }
+                ]
+            },
+            {
+                id: "z10", text: "마지막 순간, 좀비 떼가 몰려온다.",
+                options: [
+                    { id: "A", text: "끝까지 싸우다 장렬히 전사한다.", score: { LEADER: 1 } },
+                    { id: "B", text: "친구를 미끼로 던지고 도망친다.", score: { BETRAYER: 1 } }
+                ]
+            }
+        ],
+        results: [
+            {
+                type: "LEADER", title: "냉철한 생존 리더",
+                description: "빠른 판단력과 결단력으로 무리를 이끄는 리더입니다. 감정보다는 이성을 중시하며, 다수를 위해 소수를 희생할 줄도 아는 현실적인 영웅입니다. 어디가서든 대장 노릇을 할 타입!",
+                traits: ["판단력갑", "리더십"],
+                imageUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=800&auto=format&fit=crop"
+            },
+            {
+                type: "BETRAYER", title: "밉상 배신자",
+                description: "나만 살면 돼! 위기 상황에서 가장 먼저 배신할 가능성이 높습니다. 생존 본능이 극대화된 타입으로, 욕은 먹겠지만 끝까지 살아남을 확률은 가장 높습니다. 친구들이 당신을 조심해야겠네요.",
+                traits: ["생존본능", "통수장인"],
+                imageUrl: "https://images.unsplash.com/photo-1555952517-2e8e729e0b44?q=80&w=800&auto=format&fit=crop"
+            },
+            {
+                type: "FIRST", title: "1호 희생양",
+                description: "아... 안타깝게도 영화 시작 5분 만에 좀비가 될 운명입니다. 너무 착하거나, 상황 파악이 느려서 가장 먼저 희생될 수 있습니다. 다음 생에는 좀 더 눈치껏 살아보아요.",
+                traits: ["평화주의자", "좀비맛집"],
+                imageUrl: "https://images.unsplash.com/photo-1581456495146-65a71b2c8e52?q=80&w=800&auto=format&fit=crop"
+            }
+        ]
+    },
+    {
+        id: "personal-color",
+        title: "성격 퍼스널 컬러 진단",
+        description: "피부톤 말고 성격톤! 나의 성격을 색깔로 표현한다면? 10문항으로 알아보는 나의 감성 컬러.",
+        thumbnailUrl: "https://images.unsplash.com/photo-1502691876148-a84978e59af8?q=80&w=600&auto=format&fit=crop",
+        questions: [
+            {
+                id: "pc1", text: "내가 더 좋아하는 시간대는?",
+                options: [
+                    { id: "A", text: "활기찬 아침과 눈부신 낮", score: { WARM: 1 } },
+                    { id: "B", text: "차분한 새벽과 감성적인 밤", score: { COOL: 1 } }
+                ]
+            },
+            {
+                id: "pc2", text: "나를 더 잘 설명하는 단어는?",
+                options: [
+                    { id: "A", text: "열정, 에너지, 도전", score: { WARM: 1 } },
+                    { id: "B", text: "평온, 신뢰, 지혜", score: { COOL: 1 } }
+                ]
+            },
+            {
+                id: "pc3", text: "친구들이 말하는 나의 이미지는?",
+                options: [
+                    { id: "A", text: "따뜻하고 다정하다", score: { WARM: 1 } },
+                    { id: "B", text: "시크하고 쿨하다", score: { COOL: 1 } }
+                ]
+            },
+            {
+                id: "pc4", text: "스트레스 해소법은?",
+                options: [
+                    { id: "A", text: "수다 떨고 맛있는 거 먹기", score: { WARM: 1 } },
+                    { id: "B", text: "조용히 음악 듣거나 잠자기", score: { COOL: 1 } }
+                ]
+            },
+            {
+                id: "pc5", text: "주말에 가고 싶은 장소는?",
+                options: [
+                    { id: "A", text: "사람 북적이는 핫플레이스 카페", score: { WARM: 1 } },
+                    { id: "B", text: "조용한 숲속 글램핑장", score: { COOL: 1 } }
+                ]
+            },
+            {
+                id: "pc6", text: "옷장에 더 많은 색깔은?",
+                options: [
+                    { id: "A", text: "베이지, 옐로우, 브라운 계열", score: { WARM: 1 } },
+                    { id: "B", text: "블랙, 화이트, 네이비 계열", score: { COOL: 1 } }
+                ]
+            },
+            {
+                id: "pc7", text: "좋아하는 계절은?",
+                options: [
+                    { id: "A", text: "꽃 피는 봄이나 뜨거운 여름", score: { WARM: 1 } },
+                    { id: "B", text: "낙엽 지는 가을이나 눈 내리는 겨울", score: { COOL: 1 } }
+                ]
+            },
+            {
+                id: "pc8", text: "대화할 때 나의 스타일은?",
+                options: [
+                    { id: "A", text: "리액션 부자! 맞장구를 잘 쳐준다.", score: { WARM: 1 } },
+                    { id: "B", text: "경청 모드. 진지하게 들어준다.", score: { COOL: 1 } }
+                ]
+            },
+            {
+                id: "pc9", text: "나의 방 분위기는?",
+                options: [
+                    { id: "A", text: "아기자기한 소품이 가득하다.", score: { WARM: 1 } },
+                    { id: "B", text: "심플하고 모던하게 정돈되어 있다.", score: { COOL: 1 } }
+                ]
+            },
+            {
+                id: "pc10", text: "끌리는 영화 장르는?",
+                options: [
+                    { id: "A", text: "로맨틱 코미디나 감동 드라마", score: { WARM: 1 } },
+                    { id: "B", text: "미스터리 스릴러나 SF", score: { COOL: 1 } }
+                ]
+            }
+        ],
+        results: [
+            {
+                type: "WARM", title: "봄날의 햇살 옐로우",
+                description: "당신은 주변 사람들을 기분 좋게 만드는 긍정 에너지를 가졌어요. 따뜻하고 다정한 성격으로 어디서나 환영받는 분위기 메이커입니다. 당신 곁에 있으면 마음이 편안해져요.",
+                traits: ["긍정왕", "비타민"],
+                imageUrl: "https://images.unsplash.com/photo-1528696892704-5e1122852276?q=80&w=800&auto=format&fit=crop",
+                themeColor: "from-yellow-100 to-orange-50 text-orange-800"
+            },
+            {
+                type: "COOL", title: "새벽 2시의 딥 네이비",
+                description: "깊고 넓은 바다처럼 차분하고 성숙한 당신. 함부로 감정을 드러내지 않지만, 내면은 누구보다 깊고 진지합니다. 당신의 한마디에는 신뢰와 무게가 실려있어요.",
+                traits: ["새벽감성", "신뢰감"],
+                imageUrl: "https://images.unsplash.com/photo-1478359844494-1092259d93e4?q=80&w=800&auto=format&fit=crop",
+                themeColor: "from-blue-100 to-slate-200 text-slate-800"
+            }
+        ]
+    },
+    {
+        id: "kkondae-test",
+        title: "꼰대력 테스트 (Latte is Horse)",
+        description: "나 정도면 쿨하지~ 라고 생각하시나요? 당신의 뼈를 때리는 꼰대 레벨 진단! (총 10문항)",
+        thumbnailUrl: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=600&auto=format&fit=crop",
+        questions: [
+            { id: "k1", text: "후배가 인사를 작게 한다면?", options: [{ id: "A", text: "'요즘 애들은 기본이 안 되어있네' 생각한다", score: { K: 1 } }, { id: "B", text: "'바쁜가보네' 하고 넘긴다", score: { NO: 1 } }] },
+            { id: "k2", text: "회식 메뉴 정할 때?", options: [{ id: "A", text: "답정너. 내가 먹고 싶은 걸로 유도한다", score: { K: 1 } }, { id: "B", text: "다수결이나 막내의 의견을 따른다", score: { NO: 1 } }] },
+            { id: "k3", text: "\"나 때는 말이야\"라는 말이 목 끝까지 차오른 적이 있다.", options: [{ id: "A", text: "하루에도 수십 번", score: { K: 1 } }, { id: "B", text: "거의 없다", score: { NO: 1 } }] },
+            { id: "k4", text: "요즘 유행하는 줄임말을 들으면?", options: [{ id: "A", text: "'한글 파괴 아니냐?'라며 거부감이 든다", score: { K: 1 } }, { id: "B", text: "무슨 뜻인지 물어보고 배운다", score: { NO: 1 } }] },
+            { id: "k5", text: "칼퇴하는 후배를 보면?", options: [{ id: "A", text: "'일은 다 하고 가는 건가?' 눈치가 보인다", score: { K: 1 } }, { id: "B", text: "'부럽다 나도 가야지'", score: { NO: 1 } }] },
+            { id: "k6", text: "사무실에서 이어폰 끼고 일하는 후배를 보면?", options: [{ id: "A", text: "불러도 못 듣고, 예의 없어 보인다.", score: { K: 1 } }, { id: "B", text: "일만 잘하면 상관없다.", score: { NO: 1 } }] },
+            { id: "k7", text: "점심시간에 메뉴 통일하자고 하면?", options: [{ id: "A", text: "효율적이고 좋지! 국밥 콜?", score: { K: 1 } }, { id: "B", text: "각자 먹고 싶은 거 먹자.", score: { NO: 1 } }] },
+            { id: "k8", text: "후배에게 업무 피드백을 줄 때?", options: [{ id: "A", text: "'다 너 잘 되라고 하는 소리야' 사족을 붙인다.", score: { K: 1 } }, { id: "B", text: "핵심만 명확하게 전달한다.", score: { NO: 1 } }] },
+            { id: "k9", text: "퇴근 후나 주말에 업무 카톡을 보낸 적이 있다.", options: [{ id: "A", text: "급하면 보낼 수도 있지.", score: { K: 1 } }, { id: "B", text: "절대 안 보낸다.", score: { NO: 1 } }] },
+            { id: "k10", text: "솔직히 내가 꼰대라고 생각한다.", options: [{ id: "A", text: "아니, 나 정도면 쿨한 선배지.", score: { K: 1 } }, { id: "B", text: "가끔 그런 면이 있을지도 모른다.", score: { NO: 1 } }] }
+        ],
+        results: [
+            { type: "K", title: "꼰대 레벨 5: 파괴신", description: "라떼는 말이야~ 숨쉬듯이 꼰대어를 구사하시네요. 주변 사람들이 당신을 피하고 있을지도 모릅니다. 본인이 '쿨하다'고 생각한다면 더욱 위험합니다. 주의 요망!", traits: ["라떼장인", "훈수두기"], imageUrl: "https://images.unsplash.com/photo-1629239855077-94116497330d?q=80&w=800&auto=format&fit=crop" },
+            { type: "NO", title: "꼰대 청정 구역", description: "축하합니다! 당신은 꼰대 바이러스에 감염되지 않았습니다. 열린 사고방식의 소유자시군요. 후배들이 당신을 믿고 따를 것입니다.", traits: ["오픈마인드", "소통왕"], imageUrl: "https://images.unsplash.com/photo-1525182008055-f88b95ff7980?q=80&w=800&auto=format&fit=crop" }
+        ]
+    },
+    {
+        id: "rich-dna",
+        title: "숨겨진 '부자 DNA' 찾기",
+        description: "나의 소비 습관으로 보는 미래 자산 규모! 나는 욜로족일까, 워렌 버핏 꿈나무일까? (총 10문항)",
+        thumbnailUrl: "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?q=80&w=600&auto=format&fit=crop",
+        questions: [
+            { id: "r1", text: "월급이 들어왔다. 가장 먼저 하는 일은?", options: [{ id: "A", text: "적금, 주식 등 투자 계좌로 이체", score: { RICH: 1 } }, { id: "B", text: "장바구니 결제 & 카드값 상환", score: { YOLO: 1 } }] },
+            { id: "r2", text: "1+1 행사를 본다면?", options: [{ id: "A", text: "필요 없으면 안 산다.", score: { RICH: 1 } }, { id: "B", text: "개이득! 당장 담는다.", score: { YOLO: 1 } }] },
+            { id: "r3", text: "친구들과 밥을 먹고 더치페이 할 때?", options: [{ id: "A", text: "10원 단위까지 정확하게 계산한다", score: { RICH: 1 } }, { id: "B", text: "귀찮은데 내가 낼게~ (그리고 후회함)", score: { YOLO: 1 } }] },
+            { id: "r4", text: "길가다 5만원을 주웠다. 어떻게 할까?", options: [{ id: "A", text: "비상금 통장에 저금한다", score: { RICH: 1 } }, { id: "B", text: "꽁돈이다! 치킨 시켜 먹는다", score: { YOLO: 1 } }] },
+            { id: "r5", text: "매일 마시는 커피, 당신의 선택은?", options: [{ id: "A", text: "탕비실 믹스커피 or 카누", score: { RICH: 1 } }, { id: "B", text: "스타벅스 사이렌 오더", score: { YOLO: 1 } }] },
+            { id: "r6", text: "택시를 타는 빈도는?", options: [{ id: "A", text: "정말 급할 때 아니면 버스/지하철", score: { RICH: 1 } }, { id: "B", text: "걷기 귀찮으면 바로 카카오택시 호출", score: { YOLO: 1 } }] },
+            { id: "r7", text: "구독하고 있는 OTT 서비스는?", options: [{ id: "A", text: "친구랑 공유하거나 꼭 필요한 1개만", score: { RICH: 1 } }, { id: "B", text: "넷플릭스, 디즈니, 티빙... 다 봄", score: { YOLO: 1 } }] },
+            { id: "r8", text: "스트레스를 받았을 때 소비 패턴은?", options: [{ id: "A", text: "돈 안 드는 산책이나 수면", score: { RICH: 1 } }, { id: "B", text: "매운 음식 배달 or 쇼핑으로 풀기", score: { YOLO: 1 } }] },
+            { id: "r9", text: "금융 지식에 대한 관심도는?", options: [{ id: "A", text: "틈틈이 경제 뉴스나 유튜브를 본다.", score: { RICH: 1 } }, { id: "B", text: "머리 아프다. 몰라도 사는데 지장 없다.", score: { YOLO: 1 } }] },
+            { id: "r10", text: "여행을 간다면 숙소는?", options: [{ id: "A", text: "가성비 좋은 깔끔한 숙소", score: { RICH: 1 } }, { id: "B", text: "인스타 감성 5성급 호텔", score: { YOLO: 1 } }] }
+        ],
+        results: [
+            { type: "RICH", title: "워렌 버핏 꿈나무", description: "철저한 경제 관념의 소유자. 숨만 쉬어도 돈이 모이는 타입입니다. 불필요한 지출을 통제할 줄 아는 당신은 조만간 건물주가 될 상이로군요!", traits: ["인간계산기", "건물주각"], imageUrl: "https://images.unsplash.com/photo-1604594849809-dfedbc827105?q=80&w=800&auto=format&fit=crop" },
+            { type: "YOLO", title: "텅장 요정 욜로족", description: "인생은 폼생폼사! 현재의 행복이 가장 중요합니다. 하지만 통장 잔고를 볼 때마다 눈물이 나는군요. 미래의 나에게 너무 많은 짐을 떠넘기고 있지는 않은가요?", traits: ["탕진잼", "행복회로"], imageUrl: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?q=80&w=800&auto=format&fit=crop" }
+        ]
+    }
+];
