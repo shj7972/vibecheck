@@ -399,7 +399,7 @@ export const tests: TestData[] = [
             {
                 id: "z3", text: "숨어있던 마트 셔터가 내려가기 직전이다!",
                 options: [
-                    { id: "A", text: "다른 생존자가 더 없는지 소리쳐 확인한다.", score: { HERO: 1 } },
+                    { id: "A", text: "다른 생존자가 더 없는지 소리쳐 확인한다.", score: { LEADER: 1 } },
                     { id: "B", text: "일단 내가 먼저 안으로 들어가고 셔터를 내린다.", score: { BETRAYER: 1 } }
                 ]
             },
