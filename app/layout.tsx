@@ -6,8 +6,21 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://vibecheck.page'),
   title: "VibeCheck - 나를 찾는 트렌디한 심리테스트",
   description: "트렌디한 심리테스트 모음. 좀비 생존 유형부터 퍼스널 컬러, MBTI까지 다양한 테스트로 나의 바이브(Vibe)를 확인해보세요!",
+  keywords: ["심리테스트", "MBTI", "성격테스트", "VibeCheck", "바이브체크", "무료테스트"],
+  openGraph: {
+    type: "website",
+    locale: "ko_KR",
+    siteName: "VibeCheck",
+  },
+  verification: {
+    google: "google-site-verification-code", // User needs to provide this later or now
+    other: {
+      "naver-site-verification": "naver-site-verification-code", // User needs to provide this later
+    },
+  },
 };
 
 export default function RootLayout({
