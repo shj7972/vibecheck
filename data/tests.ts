@@ -372,7 +372,7 @@ export const tests: TestData[] = [
                 title: "마이웨이: 고독한 늑대",
                 description: "업무 능력은 확실하지만 불필요한 친목은 사절합니다. 워라밸을 중요시하며 자기 할 일은 완벽하게 해냅니다. 능력으로 승부하는 당신은 진정한 실력자!",
                 traits: ["칼퇴요정", "일잘러", "팩트폭격기"],
-                imageUrl: "https://images.unsplash.com/photo-1556157382-97eda2d622ca?q=80&w=800&auto=format&fit=crop"
+                imageUrl: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=800&auto=format&fit=crop"
             }
         ]
     },
