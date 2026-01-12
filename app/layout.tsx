@@ -16,9 +16,8 @@ export const metadata: Metadata = {
     siteName: "VibeCheck",
   },
   verification: {
-    google: "google-site-verification-code", // User needs to provide this later or now
     other: {
-      "naver-site-verification": "naver-site-verification-code", // User needs to provide this later
+      "naver-site-verification": "8256fe45d94c52e2c1dd176ae1004979205bfa44",
     },
   },
 };
