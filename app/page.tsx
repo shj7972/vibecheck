@@ -5,8 +5,11 @@ import { Footer } from "@/components/layout/Footer";
 import { Sparkles } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "심테공장 | 심리테스트 모음",
-  description: "나를 알아보는 가장 빠른 방법, 심테공장",
+  title: "VibeCheck (바이브체크) | 나를 찾는 트렌디한 심리테스트 모음",
+  description: "나를 알아보는 가장 빠른 방법, VibeCheck. MBTI, 좀비 아포칼립스, 퍼스널 컬러 등 트렌디한 심리테스트를 즐겨보세요.",
+  alternates: {
+    canonical: "https://vibecheck.page",
+  },
 };
 
 export default function Home() {

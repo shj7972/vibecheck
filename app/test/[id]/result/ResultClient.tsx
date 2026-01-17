@@ -68,7 +68,7 @@ export default function ResultClient({ test, result, testId }: ResultClientProps
 
                     <div className="space-y-4 mt-auto">
                         <div className="grid grid-cols-2 gap-3 w-full">
-                            <Button onClick={handleShare} variant="secondary" className="w-full gap-2">
+                            <Button onClick={handleShare} variant="gradient" className="w-full gap-2">
                                 <Share2 size={18} /> 공유하기
                             </Button>
                             <Button onClick={() => router.push(`/test/${testId}`)} variant="outline" className="w-full gap-2">
@@ -84,9 +84,10 @@ export default function ResultClient({ test, result, testId }: ResultClientProps
                     </div>
 
                     <div className="text-center mt-8 pt-6 border-t border-gray-100">
-                        <p className="text-xs text-gray-400 mb-2">운세보러 갈까요?</p>
-                        <a href="https://unsedam.kr" target="_blank" rel="noopener noreferrer" className="text-sm font-bold text-gray-600 underline underline-offset-4 decoration-primary/50 decoration-2 hover:text-primary transition-colors">
-                            2026년 신년 운세 확인하기
+                        <p className="text-xs text-gray-400 mb-3">운세보러 갈까요?</p>
+                        <a href="https://unsedam.kr" target="_blank" rel="noopener noreferrer" className="inline-block">
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                            <img src="https://unsedam.kr/static/images/banner_link_234x60.png" alt="운세담" className="rounded-lg shadow-sm hover:opacity-90 transition-opacity mx-auto" />
                         </a>
                     </div>
                 </div>

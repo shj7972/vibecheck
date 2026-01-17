@@ -144,7 +144,51 @@ export const tests: TestData[] = [
                 description: "조용하고 신비로우며 샘솟는 영감으로 타인에게 영향을 줍니다.",
                 imageUrl: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=800&auto=format&fit=crop"
             },
-            // Simplified mock fallback for others
+            {
+                type: "ISFJ", title: "용감한 수호자 (ISFJ)", traits: ["I", "S", "F", "J"],
+                description: "조용하고 차분하며 다정합니다. 주변 사람들에게 헌신적이며 안정감을 주는 성격입니다.",
+                imageUrl: "https://images.unsplash.com/photo-1516534775068-ba3e84529ec1?q=80&w=800&auto=format&fit=crop"
+            },
+            {
+                type: "INTJ", title: "용의주도한 전략가 (INTJ)", traits: ["I", "N", "T", "J"],
+                description: "상상력이 풍부하며 결단력이 있습니다. 야망이 크지만 겉으로는 잘 드러내지 않으며 분석적인 사고를 즐깁니다.",
+                imageUrl: "https://images.unsplash.com/photo-1507413245164-6160d8298b31?q=80&w=800&auto=format&fit=crop"
+            },
+            {
+                type: "ISTP", title: "만능 재주꾼 (ISTP)", traits: ["I", "S", "T", "P"],
+                description: "냉철한 이성과 왕성한 호기심을 가진 장인형입니다. 도구를 다루는 데 능숙하며 상황 적응력이 뛰어납니다.",
+                imageUrl: "https://images.unsplash.com/photo-1452860687235-ce57a8aa3ff8?q=80&w=800&auto=format&fit=crop"
+            },
+            {
+                type: "ISFP", title: "호기심 많은 예술가 (ISFP)", traits: ["I", "S", "F", "P"],
+                description: "항상 새로운 것을 찾아 헤매는 매력적인 예술가입니다. 현재의 순간을 즐기며 겸손하고 따뜻한 마음을 가졌습니다.",
+                imageUrl: "https://images.unsplash.com/photo-1499781350541-7783f6c6a0c8?q=80&w=800&auto=format&fit=crop"
+            },
+            {
+                type: "INTP", title: "논리적인 사색가 (INTP)", traits: ["I", "N", "T", "P"],
+                description: "새로운 지식에 목말라하며 논리적인 추론을 즐깁니다. 아이디어가 풍부하고 지적인 호기심이 매우 높습니다.",
+                imageUrl: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?q=80&w=800&auto=format&fit=crop"
+            },
+            {
+                type: "ESTP", title: "모험을 즐기는 사업가 (ESTP)", traits: ["E", "S", "T", "P"],
+                description: "주변에 지대한 영향을 주는 사업가형입니다. 직설적이고 유머 감각이 있으며 활동적인 것을 좋아합니다.",
+                imageUrl: "https://images.unsplash.com/photo-1485660551184-47f940bb34da?q=80&w=800&auto=format&fit=crop"
+            },
+            {
+                type: "ESFP", title: "자유로운 영혼의 연예인 (ESFP)", traits: ["E", "S", "F", "P"],
+                description: "순간의 흥분을 만끽하며 주변 사람들을 즐겁게 합니다. 에너지가 넘치고 즉흥적이며 사교적입니다.",
+                imageUrl: "https://images.unsplash.com/photo-1514525253361-bee69677079b?q=80&w=800&auto=format&fit=crop"
+            },
+            {
+                type: "ENFJ", title: "정의로운 사회운동가 (ENFJ)", traits: ["E", "N", "F", "J"],
+                description: "넘치는 카리스마와 열정으로 사람들을 이끄는 리더입니다. 타인의 성장을 돕고 공동의 이익을 추구합니다.",
+                imageUrl: "https://images.unsplash.com/photo-1521791136064-7986c2959210?q=80&w=800&auto=format&fit=crop"
+            },
+            {
+                type: "ENTJ", title: "대담한 통솔자 (ENTJ)", traits: ["E", "N", "T", "J"],
+                description: "대담하고 상상력이 풍부하며 강력한 의지를 가진 리더입니다. 목표를 달성하기 위해 냉철한 판단을 내립니다.",
+                imageUrl: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=800&auto=format&fit=crop"
+            },
         ],
     },
     {
@@ -264,11 +308,32 @@ export const tests: TestData[] = [
                 imageUrl: "https://images.unsplash.com/photo-1518621736915-f3b1c41bfd00?q=80&w=800&auto=format&fit=crop"
             },
             {
-                type: "ENTP",
-                title: "플러팅 장인 매력쟁이",
-                description: "재치 있는 입담으로 상대를 사로잡는 매력의 소유자. 뻔한 데이트보다는 새롭고 자극적인 활동을 좋아합니다. 때로는 짓궂은 장난으로 애정을 표현하기도 하죠.",
-                traits: ["E", "N", "T", "P"],
-                imageUrl: "https://images.unsplash.com/photo-1517487881594-2787fef5ebf7?q=80&w=800&auto=format&fit=crop"
+                type: "ENTJ",
+                title: "카리스마 폭격기",
+                description: "사랑도 정복의 대상! 효율적이고 명확한 연애를 선호합니다. 상대방을 성장시켜주는 훌륭한 파트너이지만, 때로는 너무 강한 고집으로 상대를 지치게 할 수도 있어요.",
+                traits: ["야망가", "불도저"],
+                imageUrl: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=800&auto=format&fit=crop"
+            },
+            {
+                type: "ISFJ",
+                title: "헌신적인 가디언",
+                description: "보이지 않는 곳에서 묵묵히 챙겨주는 스타일. 안정적인 관계를 추구하며 상대방의 작은 변화도 섬세하게 알아차립니다. 당신의 배려는 연인을 감동시키기에 충분해요.",
+                traits: ["다정다감", "기억력갑"],
+                imageUrl: "https://images.unsplash.com/photo-1516534775068-ba3e84529ec1?q=80&w=800&auto=format&fit=crop"
+            },
+            {
+                type: "INFJ",
+                title: "신비로운 영혼의 동반자",
+                description: "말하지 않아도 마음을 읽어주는 깊은 공감력의 소유자. 가벼운 만남보다는 영혼의 교감을 중요시합니다. 가끔은 혼자만의 시간이 필요하지만, 사랑하는 사람에게는 모든 것을 내어주죠.",
+                traits: ["통찰력", "로맨틱"],
+                imageUrl: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=800&auto=format&fit=crop"
+            },
+            {
+                type: "ESFJ",
+                title: "사랑 넘치는 분위기 메이커",
+                description: "주변 모든 사람과 잘 지내고 싶은 사랑꾼. 연인의 친구들과도 금방 친해지는 친화력을 가졌습니다. 리액션이 좋고 챙겨주는 것을 좋아해 연애 만족도가 높은 타입입니다.",
+                traits: ["사교왕", "배려왕"],
+                imageUrl: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=800&auto=format&fit=crop"
             }
         ],
     },
@@ -386,7 +451,7 @@ export const tests: TestData[] = [
                 id: "z1", text: "좀비 바이러스 뉴스가 속보로 떴다. 나의 반응은?",
                 options: [
                     { id: "A", text: "가짜 뉴스겠지. 일단 출근한다.", score: { FIRST: 1 } },
-                    { id: "B", text: "마트로 달려가 생필품부터 사재기한다.", score: { LEADER: 1 } }
+                    { id: "B", text: "마트로 달려가 생필품부터 사재기한다.", score: { SCAVENGER: 1 } }
                 ]
             },
             {
@@ -414,7 +479,7 @@ export const tests: TestData[] = [
                 id: "z5", text: "무기가 될만한 것을 발견했다. 무엇을 집을까?",
                 options: [
                     { id: "A", text: "확실하게 제압할 수 있는 야구방망이", score: { LEADER: 1 } },
-                    { id: "B", text: "가볍고 숨기기 쉬운 과도", score: { BETRAYER: 1 } }
+                    { id: "B", text: "가볍고 숨기기 쉬운 과도", score: { SCAVENGER: 1 } }
                 ]
             },
             {
@@ -427,21 +492,21 @@ export const tests: TestData[] = [
             {
                 id: "z7", text: "밤에 이상한 소리가 들린다.",
                 options: [
-                    { id: "A", text: "무슨 일인지 확인하러 나간다.", score: { FIRST: 1 } },
-                    { id: "B", text: "죽은 척하고 조용히 있는다.", score: { BETRAYER: 1 } }
+                    { id: "A", text: "무슨 일인지 확인하러 나간다.", score: { LEADER: 1 } },
+                    { id: "B", text: "죽은 척하고 조용히 있는다.", score: { SCIENTIST: 1 } }
                 ]
             },
             {
                 id: "z8", text: "생존자 무리를 만났다. 합류할까?",
                 options: [
                     { id: "A", text: "쪽수가 많아야 산다. 합류한다.", score: { FIRST: 1 } },
-                    { id: "B", text: "믿을 수 없다. 거리를 두고 지켜본다.", score: { LEADER: 1 } }
+                    { id: "B", text: "믿을 수 없다. 거리를 두고 지켜본다.", score: { SCIENTIST: 1 } }
                 ]
             },
             {
                 id: "z9", text: "탈출 헬기가 도착했다! 자리가 하나뿐이라면?",
                 options: [
-                    { id: "A", text: "노약자나 아이에게 양보한다.", score: { FIRST: 1 } },
+                    { id: "A", text: "노약자나 아이에게 양보한다.", score: { LEADER: 1 } },
                     { id: "B", text: "밀치고 내가 먼저 탄다.", score: { BETRAYER: 1 } }
                 ]
             },
@@ -449,7 +514,7 @@ export const tests: TestData[] = [
                 id: "z10", text: "마지막 순간, 좀비 떼가 몰려온다.",
                 options: [
                     { id: "A", text: "끝까지 싸우다 장렬히 전사한다.", score: { LEADER: 1 } },
-                    { id: "B", text: "친구를 미끼로 던지고 도망친다.", score: { BETRAYER: 1 } }
+                    { id: "B", text: "백신 샘플을 챙겨 탈출을 시도한다.", score: { SCIENTIST: 1 } }
                 ]
             }
         ],
@@ -471,6 +536,18 @@ export const tests: TestData[] = [
                 description: "아... 안타깝게도 영화 시작 5분 만에 좀비가 될 운명입니다. 너무 착하거나, 상황 파악이 느려서 가장 먼저 희생될 수 있습니다. 다음 생에는 좀 더 눈치껏 살아보아요.",
                 traits: ["평화주의자", "좀비맛집"],
                 imageUrl: "https://images.unsplash.com/photo-1581456495146-65a71b2c8e52?q=80&w=800&auto=format&fit=crop"
+            },
+            {
+                type: "SCAVENGER", title: "실속파 보급 전문가",
+                description: "전투력보다는 생존에 필요한 물자를 찾아내는 능력이 탁월합니다. 마트 털기, 은신처 찾기의 달인! 당신과 함께라면 굶어 죽지는 않겠지만, 위험한 순간에는 이미 사라져있을지도 몰라요.",
+                traits: ["눈치백단", "생존물자장인"],
+                imageUrl: "https://images.unsplash.com/photo-1509248961158-e54f6934749c?q=80&w=800&auto=format&fit=crop"
+            },
+            {
+                type: "SCIENTIST", title: "최후의 희망 박사님",
+                description: "무력은 낮지만 인류를 구할 백신을 개발할 유일한 희망입니다. 냉철하게 상황을 관찰하고 분석하는 능력이 뛰어납니다. 당신을 지켜줄 든든한 동료만 있다면 세상을 구할 수 있을 거예요.",
+                traits: ["브레인", "인류의희망"],
+                imageUrl: "https://images.unsplash.com/photo-1532187875605-7fe3475c1298?q=80&w=800&auto=format&fit=crop"
             }
         ]
     },

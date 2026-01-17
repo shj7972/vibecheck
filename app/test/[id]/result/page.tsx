@@ -21,7 +21,6 @@ export async function generateMetadata(
 
     const result = test.results.find((r) => r.type === type) || test.results[0];
 
-    // Fallback images if result image isn't available (though it should be)
     const images = result.imageUrl
         ? [result.imageUrl]
         : test.thumbnailUrl
@@ -29,19 +28,23 @@ export async function generateMetadata(
             : [];
 
     return {
-        title: `${result.title} | ${test.title}`,
-        description: result.description,
+        title: `${result.title} (결과)`,
+        description: `${test.title} 결과: ${result.description}`,
         openGraph: {
-            title: result.title,
+            title: `${result.title} | ${test.title}`,
             description: result.description,
             images: images,
             type: "website",
+            url: `https://vibecheck.page/test/${id}/result?type=${type}`,
         },
         twitter: {
             card: "summary_large_image",
-            title: result.title,
+            title: `${result.title} | ${test.title}`,
             description: result.description,
             images: images,
+        },
+        alternates: {
+            canonical: `https://vibecheck.page/test/${id}/result?type=${type}`,
         },
     };
 }

@@ -7,19 +7,43 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://vibecheck.page'),
-  title: "VibeCheck - 나를 찾는 트렌디한 심리테스트",
+  title: {
+    default: "VibeCheck - 나를 찾는 트렌디한 심리테스트",
+    template: "%s | VibeCheck"
+  },
   description: "트렌디한 심리테스트 모음. 좀비 생존 유형부터 퍼스널 컬러, MBTI까지 다양한 테스트로 나의 바이브(Vibe)를 확인해보세요!",
-  keywords: ["심리테스트", "MBTI", "성격테스트", "VibeCheck", "바이브체크", "무료테스트"],
+  keywords: ["심리테스트", "MBTI", "성격테스트", "VibeCheck", "바이브체크", "무료테스트", "심테"],
+  authors: [{ name: "VibeCheck Team" }],
+  creator: "VibeCheck",
+  publisher: "VibeCheck",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
   openGraph: {
     type: "website",
     locale: "ko_KR",
+    url: "https://vibecheck.page",
     siteName: "VibeCheck",
+    title: "VibeCheck - 나를 찾는 트렌디한 심리테스트",
+    description: "트렌디한 심리테스트 모음. 좀비 생존 유형부터 퍼스널 컬러, MBTI까지 다양한 테스트로 나의 바이브(Vibe)를 확인해보세요!",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "VibeCheck - 나를 찾는 트렌디한 심리테스트",
+    description: "트렌디한 심리테스트 모음. 좀비 생존 유형부터 퍼스널 컬러, MBTI까지 다양한 테스트로 나의 바이브(Vibe)를 확인해보세요!",
   },
   verification: {
+    google: "cnz5bZ2_xuDCfsCEMaJgykEyNZ7AhLNDGToTFQi3e-w",
     other: {
       "naver-site-verification": "8256fe45d94c52e2c1dd176ae1004979205bfa44",
     },
   },
+  robots: {
+    index: true,
+    follow: true,
+  }
 };
 
 export default function RootLayout({
@@ -35,7 +59,7 @@ export default function RootLayout({
             {children}
           </main>
         </div>
-        <GoogleAnalytics gaId="G-YOUR-ID-HERE" />
+        <GoogleAnalytics gaId="G-T9X4Z7B2C7" />
       </body>
     </html>
   );
