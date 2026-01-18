@@ -688,5 +688,133 @@ export const tests: TestData[] = [
             { type: "RICH", title: "워렌 버핏 꿈나무", description: "철저한 경제 관념의 소유자. 숨만 쉬어도 돈이 모이는 타입입니다. 불필요한 지출을 통제할 줄 아는 당신은 조만간 건물주가 될 상이로군요!", traits: ["인간계산기", "건물주각"], imageUrl: "https://images.unsplash.com/photo-1604594849809-dfedbc827105?q=80&w=800&auto=format&fit=crop" },
             { type: "YOLO", title: "텅장 요정 욜로족", description: "인생은 폼생폼사! 현재의 행복이 가장 중요합니다. 하지만 통장 잔고를 볼 때마다 눈물이 나는군요. 미래의 나에게 너무 많은 짐을 떠넘기고 있지는 않은가요?", traits: ["탕진잼", "행복회로"], imageUrl: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?q=80&w=800&auto=format&fit=crop" }
         ]
+    },
+    {
+        id: "joseon-job",
+        title: "전생 체험: 조선시대 내 직업은?",
+        description: "\"나는 왕이 될 상인가, 아니면 노비 문서에 도장을 찍을 상인가?\" 현대의 성향을 조선시대 계급에 빗대어 알아보는 신분 예측 테스트. (총 7문항)",
+        thumbnailUrl: "https://images.unsplash.com/photo-1555660232-024844391c49?q=80&w=600&auto=format&fit=crop",
+        questions: [
+            {
+                id: "j1", text: "주말에 집에 있는데 배가 고프다. 어떻게 할까?",
+                options: [
+                    { id: "A", text: "\"여봐라~ 아무도 없느냐?\" 배달 앱을 켠다.", score: { ROYAL: 1 } },
+                    { id: "B", text: "직접 냉장고를 뒤져서 요리해 먹는다.", score: { SLAVE: 1 } }
+                ]
+            },
+            {
+                id: "j2", text: "친구들과의 모임에서 나는?",
+                options: [
+                    { id: "A", text: "내가 분위기를 주도하고 다들 내 말을 따른다.", score: { ROYAL: 1, SCHOLAR: 1 } },
+                    { id: "B", text: "남들이 하자는 대로 조용히 따라간다.", score: { SLAVE: 1, MERCHANT: 1 } }
+                ]
+            },
+            {
+                id: "j3", text: "돈에 대한 나의 가치관은?",
+                options: [
+                    { id: "A", text: "돈이 최고다. 명예보다 부가 우선!", score: { MERCHANT: 1 } },
+                    { id: "B", text: "돈보다는 체면과 명예가 중요하다.", score: { SCHOLAR: 1 } }
+                ]
+            },
+            {
+                id: "j4", text: "일을 할 때 나의 스타일은?",
+                options: [
+                    { id: "A", text: "남에게 시키는 게 편하다.", score: { ROYAL: 1 } },
+                    { id: "B", text: "내가 직접 몸으로 뛰는 게 속 편하다.", score: { SLAVE: 1, MERCHANT: 1 } }
+                ]
+            },
+            {
+                id: "j5", text: "규칙과 규율에 대해 어떻게 생각하나?",
+                options: [
+                    { id: "A", text: "답답하다. 나는 자유로운 영혼이다!", score: { REBEL: 1 } },
+                    { id: "B", text: "사회 질서를 위해 반드시 지켜야 한다.", score: { SCHOLAR: 1 } }
+                ]
+            },
+            {
+                id: "j6", text: "사람들이 나를 볼 때?",
+                options: [
+                    { id: "A", text: "어려워하거나 존경의 눈빛을 보낸다.", score: { ROYAL: 1, SCHOLAR: 1 } },
+                    { id: "B", text: "편안해하고 만만하게(?) 본다.", score: { REBEL: 1, SLAVE: 1 } }
+                ]
+            },
+            {
+                id: "j7", text: "인생의 목표는?",
+                options: [
+                    { id: "A", text: "즐겁고 편하게 놀고 먹는 것", score: { REBEL: 1 } },
+                    { id: "B", text: "남들 위에 서는 권력자가 되는 것", score: { ROYAL: 1 } }
+                ]
+            }
+        ],
+        results: [
+            { type: "ROYAL", title: "천상천하 유아독존: 왕(King)", description: "당신은 타고난 리더입니다! 남의 밑에 있을 사람이 아니군요. 현대에서도 팀장이나 대표 역할을 맡는 경우가 많겠어요. 다만 너무 독단적이면 폭군이 될 수 있으니 주의!", traits: ["리더십", "야망가"], imageUrl: "https://images.unsplash.com/photo-1599839575945-a9e5af0c3fa5?q=80&w=800&auto=format&fit=crop" },
+            { type: "SCHOLAR", title: "청렴결백: 영의정(선비)", description: "지적이고 논리적인 당신! 학식과 덕망을 갖춘 선비 스타일입니다. 명예를 중시하며, 올바른 길을 가려는 신념이 강합니다. 현대판 브레인이시군요.", traits: ["지적임", "원칙주의"], imageUrl: "https://images.unsplash.com/photo-1590053912648-28952b7ba408?q=80&w=800&auto=format&fit=crop" },
+            { type: "MERCHANT", title: "돈 냄새 맡는: 거상", description: "계산이 빠르고 실속을 챙길 줄 아는 당신! 명예보다는 실리가 중요합니다. 타고난 사업 수완으로 현대에서도 부자가 될 확률이 가장 높습니다.", traits: ["수완가", "현실적"], imageUrl: "https://images.unsplash.com/photo-1626265774643-f1943311566b?q=80&w=800&auto=format&fit=crop" },
+            { type: "REBEL", title: "바람 따라 구름 따라: 한량", description: "인생 뭐 있어? 즐기는 게 최고지! 얽매이는 것을 싫어하고 자유를 사랑하는 영혼입니다. 예술적 감각이 뛰어나며, 음주가무에 능할 수도 있어요.", traits: ["자유영혼", "흥부자"], imageUrl: "https://images.unsplash.com/photo-1510590337019-5ef2d3977e2e?q=80&w=800&auto=format&fit=crop" },
+            { type: "SLAVE", title: "프로 일잘러: 노비(머슴)", description: "시키는 일 하나는 기가 막히게 잘하는 당신! 성실함이 무기입니다. 하지만 너무 남의 눈치만 보지 마세요. 현대에서는 '월급 노예'라고 불릴지도... 힘내세요!", traits: ["성실함", "예스맨"], imageUrl: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=800&auto=format&fit=crop" }
+        ]
+    },
+    {
+        id: "isekai-truck",
+        title: "🧙 이세계 환생 트럭 테스트",
+        description: "트럭에 치여 눈을 떠보니 이세계?! 마왕일까 용사일까, 아니면 슬라임? 당신의 이세계 직업 매칭! (총 7문항)",
+        thumbnailUrl: "https://images.unsplash.com/photo-1634834311053-14498ec56ae6?q=80&w=600&auto=format&fit=crop",
+        questions: [
+            {
+                id: "i1", text: "눈을 떠보니 낯선 숲속이다. 가장 먼저 할 행동은?",
+                options: [
+                    { id: "A", text: "주변을 탐색하며 정보를 수집한다.", score: { HERO: 1, WIZARD: 1 } },
+                    { id: "B", text: "일단 다시 잔다. 꿈이겠지.", score: { SLIME: 1, VILLAGER: 1 } }
+                ]
+            },
+            {
+                id: "i2", text: "몬스터가 나타났다! 나의 대처법은?",
+                options: [
+                    { id: "A", text: "정면 승부! 검을 뽑아 돌진한다.", score: { HERO: 1, DEMON: 1 } },
+                    { id: "B", text: "멀리서 마법으로 안전하게 공격한다.", score: { WIZARD: 1 } }
+                ]
+            },
+            {
+                id: "i3", text: "길가다 엄청나게 강해 보이는 검을 발견했다.",
+                options: [
+                    { id: "A", text: "내꺼다! 바로 뽑아본다.", score: { HERO: 1, DEMON: 1 } },
+                    { id: "B", text: "저주받았을지 모른다. 지나친다.", score: { VILLAGER: 1, SLIME: 1 } }
+                ]
+            },
+            {
+                id: "i4", text: "동료를 모은다면 어떤 스타일로?",
+                options: [
+                    { id: "A", text: "나를 따르라! 내 명령을 잘 듣는 부하들.", score: { DEMON: 1 } },
+                    { id: "B", text: "서로 믿고 의지하는 평등한 친구들.", score: { HERO: 1 } }
+                ]
+            },
+            {
+                id: "i5", text: "평화로운 마을에 도착했다. 하고 싶은 일은?",
+                options: [
+                    { id: "A", text: "마을 촌장에게 퀘스트를 받는다.", score: { HERO: 1 } },
+                    { id: "B", text: "농사나 짓고 평화롭게 살고 싶다.", score: { VILLAGER: 1, SLIME: 1 } }
+                ]
+            },
+            {
+                id: "i6", text: "최종 보스 마왕성 앞에 도착했다.",
+                options: [
+                    { id: "A", text: "세상을 구하기 위해 문을 박차고 들어간다.", score: { HERO: 1 } },
+                    { id: "B", text: "사실 내가 마왕이었다면? (반전)", score: { DEMON: 1 } }
+                ]
+            },
+            {
+                id: "i7", text: "이세계에서 얻고 싶은 능력은?",
+                options: [
+                    { id: "A", text: "세계관 최강의 파괴력", score: { DEMON: 1, WIZARD: 1 } },
+                    { id: "B", text: "죽지 않는 재생능력과 편안함", score: { SLIME: 1, VILLAGER: 1 } }
+                ]
+            }
+        ],
+        results: [
+            { type: "DEMON", title: "세계관 최강자: 마왕", description: "압도적인 카리스마와 힘을 가진 당신! 세상을 발 아래 두고 싶어하는 정복자 기질이 있습니다. 하지만 가끔은 용사에게 당해주는 자비(?)도 베풀어주세요.", traits: ["지배자", "최강자"], imageUrl: "https://images.unsplash.com/photo-1634927702816-7788448a3cda?q=80&w=800&auto=format&fit=crop" },
+            { type: "HERO", title: "정의의 사도: 용사", description: "불의를 보면 참지 못하는 정의로운 성격! 곤경에 처한 사람을 돕고 동료를 모아 세상을 구하는 전형적인 주인공 스타일입니다.", traits: ["용기", "주인공"], imageUrl: "https://images.unsplash.com/photo-1647426867375-9c946f332768?q=80&w=800&auto=format&fit=crop" },
+            { type: "WIZARD", title: "지혜의 탐구자: 대마법사", description: "육체노동은 질색! 뛰어난 지능과 마법으로 모든 것을 해결합니다. 혼자 있는 것을 좋아하고 연구와 탐구에 몰두하는 학구파입니다.", traits: ["지능캐", "방구석여포"], imageUrl: "https://images.unsplash.com/photo-1519074069444-1ba4fff66d16?q=80&w=800&auto=format&fit=crop" },
+            { type: "SLIME", title: "말랑말랑: 슬라임", description: "가장 약해 보이지만 생존력은 최강! 흐물흐물 상황에 맞춰 살아가는 유연함을 가졌습니다. 스트레스 받기 싫어하고 편안함을 추구하는 평화주의자입니다.", traits: ["유연함", "생존왕"], imageUrl: "https://images.unsplash.com/photo-1596796335198-4680c6559099?q=80&w=800&auto=format&fit=crop" },
+            { type: "VILLAGER", title: "평범 그 자체: 마을 주민 A", description: "튀는 건 싫어! 엑스트라처럼 보이지만 사실 마을의 평화를 지키는 숨은 주역입니다. 소소한 행복을 즐기며 평범하게 사는 것이 꿈인 당신.", traits: ["평범함", "안전제일"], imageUrl: "https://images.unsplash.com/photo-1506929562872-bb421503ef21?q=80&w=800&auto=format&fit=crop" }
+        ]
     }
 ];
