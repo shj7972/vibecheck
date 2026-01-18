@@ -693,7 +693,7 @@ export const tests: TestData[] = [
         id: "joseon-job",
         title: "전생 체험: 조선시대 내 직업은?",
         description: "\"나는 왕이 될 상인가, 아니면 노비 문서에 도장을 찍을 상인가?\" 현대의 성향을 조선시대 계급에 빗대어 알아보는 신분 예측 테스트. (총 7문항)",
-        thumbnailUrl: "https://images.unsplash.com/photo-1555660232-024844391c49?q=80&w=600&auto=format&fit=crop",
+        thumbnailUrl: "/images/joseon_thumb.png",
         questions: [
             {
                 id: "j1", text: "주말에 집에 있는데 배가 고프다. 어떻게 할까?",
@@ -746,18 +746,18 @@ export const tests: TestData[] = [
             }
         ],
         results: [
-            { type: "ROYAL", title: "천상천하 유아독존: 왕(King)", description: "당신은 타고난 리더입니다! 남의 밑에 있을 사람이 아니군요. 현대에서도 팀장이나 대표 역할을 맡는 경우가 많겠어요. 다만 너무 독단적이면 폭군이 될 수 있으니 주의!", traits: ["리더십", "야망가"], imageUrl: "https://images.unsplash.com/photo-1599839575945-a9e5af0c3fa5?q=80&w=800&auto=format&fit=crop" },
-            { type: "SCHOLAR", title: "청렴결백: 영의정(선비)", description: "지적이고 논리적인 당신! 학식과 덕망을 갖춘 선비 스타일입니다. 명예를 중시하며, 올바른 길을 가려는 신념이 강합니다. 현대판 브레인이시군요.", traits: ["지적임", "원칙주의"], imageUrl: "https://images.unsplash.com/photo-1590053912648-28952b7ba408?q=80&w=800&auto=format&fit=crop" },
-            { type: "MERCHANT", title: "돈 냄새 맡는: 거상", description: "계산이 빠르고 실속을 챙길 줄 아는 당신! 명예보다는 실리가 중요합니다. 타고난 사업 수완으로 현대에서도 부자가 될 확률이 가장 높습니다.", traits: ["수완가", "현실적"], imageUrl: "https://images.unsplash.com/photo-1626265774643-f1943311566b?q=80&w=800&auto=format&fit=crop" },
-            { type: "REBEL", title: "바람 따라 구름 따라: 한량", description: "인생 뭐 있어? 즐기는 게 최고지! 얽매이는 것을 싫어하고 자유를 사랑하는 영혼입니다. 예술적 감각이 뛰어나며, 음주가무에 능할 수도 있어요.", traits: ["자유영혼", "흥부자"], imageUrl: "https://images.unsplash.com/photo-1510590337019-5ef2d3977e2e?q=80&w=800&auto=format&fit=crop" },
-            { type: "SLAVE", title: "프로 일잘러: 노비(머슴)", description: "시키는 일 하나는 기가 막히게 잘하는 당신! 성실함이 무기입니다. 하지만 너무 남의 눈치만 보지 마세요. 현대에서는 '월급 노예'라고 불릴지도... 힘내세요!", traits: ["성실함", "예스맨"], imageUrl: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=800&auto=format&fit=crop" }
+            { type: "ROYAL", title: "천상천하 유아독존: 왕(King)", description: "당신은 타고난 리더입니다! 남의 밑에 있을 사람이 아니군요. 현대에서도 팀장이나 대표 역할을 맡는 경우가 많겠어요. 다만 너무 독단적이면 폭군이 될 수 있으니 주의!", traits: ["리더십", "야망가"], imageUrl: "/images/joseon_king.png" },
+            { type: "SCHOLAR", title: "청렴결백: 영의정(선비)", description: "지적이고 논리적인 당신! 학식과 덕망을 갖춘 선비 스타일입니다. 명예를 중시하며, 올바른 길을 가려는 신념이 강합니다. 현대판 브레인이시군요.", traits: ["지적임", "원칙주의"], imageUrl: "/images/joseon_scholar.png" },
+            { type: "MERCHANT", title: "돈 냄새 맡는: 거상", description: "계산이 빠르고 실속을 챙길 줄 아는 당신! 명예보다는 실리가 중요합니다. 타고난 사업 수완으로 현대에서도 부자가 될 확률이 가장 높습니다.", traits: ["수완가", "현실적"], imageUrl: "/images/joseon_merchant.png" },
+            { type: "REBEL", title: "바람 따라 구름 따라: 한량", description: "인생 뭐 있어? 즐기는 게 최고지! 얽매이는 것을 싫어하고 자유를 사랑하는 영혼입니다. 예술적 감각이 뛰어나며, 음주가무에 능할 수도 있어요.", traits: ["자유영혼", "흥부자"], imageUrl: "/images/joseon_rebel.png" },
+            { type: "SLAVE", title: "프로 일잘러: 노비(머슴)", description: "시키는 일 하나는 기가 막히게 잘하는 당신! 성실함이 무기입니다. 하지만 너무 남의 눈치만 보지 마세요. 현대에서는 '월급 노예'라고 불릴지도... 힘내세요!", traits: ["성실함", "예스맨"], imageUrl: "/images/joseon_slave.png" }
         ]
     },
     {
         id: "isekai-truck",
         title: "🧙 이세계 환생 트럭 테스트",
         description: "트럭에 치여 눈을 떠보니 이세계?! 마왕일까 용사일까, 아니면 슬라임? 당신의 이세계 직업 매칭! (총 7문항)",
-        thumbnailUrl: "https://images.unsplash.com/photo-1634834311053-14498ec56ae6?q=80&w=600&auto=format&fit=crop",
+        thumbnailUrl: "/images/isekai_thumb.png",
         questions: [
             {
                 id: "i1", text: "눈을 떠보니 낯선 숲속이다. 가장 먼저 할 행동은?",
@@ -810,11 +810,11 @@ export const tests: TestData[] = [
             }
         ],
         results: [
-            { type: "DEMON", title: "세계관 최강자: 마왕", description: "압도적인 카리스마와 힘을 가진 당신! 세상을 발 아래 두고 싶어하는 정복자 기질이 있습니다. 하지만 가끔은 용사에게 당해주는 자비(?)도 베풀어주세요.", traits: ["지배자", "최강자"], imageUrl: "https://images.unsplash.com/photo-1634927702816-7788448a3cda?q=80&w=800&auto=format&fit=crop" },
-            { type: "HERO", title: "정의의 사도: 용사", description: "불의를 보면 참지 못하는 정의로운 성격! 곤경에 처한 사람을 돕고 동료를 모아 세상을 구하는 전형적인 주인공 스타일입니다.", traits: ["용기", "주인공"], imageUrl: "https://images.unsplash.com/photo-1647426867375-9c946f332768?q=80&w=800&auto=format&fit=crop" },
-            { type: "WIZARD", title: "지혜의 탐구자: 대마법사", description: "육체노동은 질색! 뛰어난 지능과 마법으로 모든 것을 해결합니다. 혼자 있는 것을 좋아하고 연구와 탐구에 몰두하는 학구파입니다.", traits: ["지능캐", "방구석여포"], imageUrl: "https://images.unsplash.com/photo-1519074069444-1ba4fff66d16?q=80&w=800&auto=format&fit=crop" },
-            { type: "SLIME", title: "말랑말랑: 슬라임", description: "가장 약해 보이지만 생존력은 최강! 흐물흐물 상황에 맞춰 살아가는 유연함을 가졌습니다. 스트레스 받기 싫어하고 편안함을 추구하는 평화주의자입니다.", traits: ["유연함", "생존왕"], imageUrl: "https://images.unsplash.com/photo-1596796335198-4680c6559099?q=80&w=800&auto=format&fit=crop" },
-            { type: "VILLAGER", title: "평범 그 자체: 마을 주민 A", description: "튀는 건 싫어! 엑스트라처럼 보이지만 사실 마을의 평화를 지키는 숨은 주역입니다. 소소한 행복을 즐기며 평범하게 사는 것이 꿈인 당신.", traits: ["평범함", "안전제일"], imageUrl: "https://images.unsplash.com/photo-1506929562872-bb421503ef21?q=80&w=800&auto=format&fit=crop" }
+            { type: "DEMON", title: "세계관 최강자: 마왕", description: "압도적인 카리스마와 힘을 가진 당신! 세상을 발 아래 두고 싶어하는 정복자 기질이 있습니다. 하지만 가끔은 용사에게 당해주는 자비(?)도 베풀어주세요.", traits: ["지배자", "최강자"], imageUrl: "/images/isekai_demon.png" },
+            { type: "HERO", title: "정의의 사도: 용사", description: "불의를 보면 참지 못하는 정의로운 성격! 곤경에 처한 사람을 돕고 동료를 모아 세상을 구하는 전형적인 주인공 스타일입니다.", traits: ["용기", "주인공"], imageUrl: "/images/isekai_hero.png" },
+            { type: "WIZARD", title: "지혜의 탐구자: 대마법사", description: "육체노동은 질색! 뛰어난 지능과 마법으로 모든 것을 해결합니다. 혼자 있는 것을 좋아하고 연구와 탐구에 몰두하는 학구파입니다.", traits: ["지능캐", "방구석여포"], imageUrl: "/images/isekai_wizard.png" },
+            { type: "SLIME", title: "말랑말랑: 슬라임", description: "가장 약해 보이지만 생존력은 최강! 흐물흐물 상황에 맞춰 살아가는 유연함을 가졌습니다. 스트레스 받기 싫어하고 편안함을 추구하는 평화주의자입니다.", traits: ["유연함", "생존왕"], imageUrl: "/images/isekai_slime.png" },
+            { type: "VILLAGER", title: "평범 그 자체: 마을 주민 A", description: "튀는 건 싫어! 엑스트라처럼 보이지만 사실 마을의 평화를 지키는 숨은 주역입니다. 소소한 행복을 즐기며 평범하게 사는 것이 꿈인 당신.", traits: ["평범함", "안전제일"], imageUrl: "/images/isekai_villager.png" }
         ]
     }
 ];
