@@ -43,7 +43,7 @@ export default function PrivacyPage() {
                 </p>
 
                 <h2 className="text-lg font-semibold mt-6 mb-2">5. 개인정보 보호책임자</h2>
-                <p>이메일: contact@vibecheck.page</p>
+                <p>이메일: (준비 중)</p>
 
                 <p className="text-xs text-gray-500 mt-8">이 방침은 2025년 5월 27일부터 시행됩니다.</p>
             </div>

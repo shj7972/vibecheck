@@ -60,7 +60,7 @@ export default function RootLayout({
             {children}
           </main>
         </div>
-        <GoogleAnalytics gaId="G-T9X4Z7B2C7" />
+        <GoogleAnalytics gaId="G-HLFXV4C2WN" />
         <Script
           id="adsense-init"
           async
