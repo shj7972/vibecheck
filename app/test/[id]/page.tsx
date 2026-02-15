@@ -68,6 +68,27 @@ export default async function QuizPage({ params }: Props) {
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
             />
             <QuizClient test={test} />
+
+            {/* AdSense Rich Content Section */}
+            {test.content && test.content.length > 0 && (
+                <article className="max-w-3xl mx-auto px-4 py-12 space-y-12">
+                    <div className="h-px w-full bg-gradient-to-r from-transparent via-gray-200 to-transparent" />
+
+                    {test.content.map((section, idx) => (
+                        <section key={idx} className="space-y-4">
+                            <h2 className="text-2xl font-bold text-gray-800 flex items-center gap-2">
+                                <span className="w-1.5 h-8 bg-indigo-500 rounded-full inline-block" />
+                                {section.title}
+                            </h2>
+                            <div className="space-y-4 text-gray-600 leading-relaxed text-lg">
+                                {section.paragraphs.map((para, pIdx) => (
+                                    <p key={pIdx}>{para}</p>
+                                ))}
+                            </div>
+                        </section>
+                    ))}
+                </article>
+            )}
         </>
     );
 }

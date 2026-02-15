@@ -19,6 +19,11 @@ export type TestResult = {
     themeColor?: string; // Optional hex code for result page styling
 };
 
+export type TestContent = {
+    title: string;
+    paragraphs: string[];
+};
+
 export type TestData = {
     id: string;
     title: string;
@@ -26,6 +31,7 @@ export type TestData = {
     thumbnailUrl?: string; // or emoji
     questions: Question[];
     results: TestResult[];
+    content?: TestContent[]; // New field for rich content (AdSense)
     // Logic to determine result
     // Simple max score logic for now. 
     // We can map result types to score keys.

@@ -5,13 +5,17 @@ export function IntroSection() {
     return (
         <section className="py-12 bg-white/50 backdrop-blur-sm rounded-3xl my-8 border border-white/60 shadow-sm">
             <div className="px-6 md:px-12">
-                <div className="text-center mb-10">
-                    <h2 className="text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-violet-600 to-indigo-600 mb-4">
+                <div className="text-center mb-12">
+                    <h2 className="text-3xl md:text-4xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-violet-600 to-indigo-600 mb-6">
                         Why VibeCheck?
                     </h2>
-                    <p className="text-gray-600 max-w-2xl mx-auto leading-relaxed">
+                    <p className="text-gray-600 max-w-3xl mx-auto leading-relaxed text-lg">
                         나를 알아가는 과정은 언제나 흥미롭습니다. <br className="hidden md:block" />
                         VibeCheck는 단순한 재미를 넘어, 당신의 숨겨진 성향과 잠재력을 발견하도록 돕습니다.
+                    </p>
+                    <p className="text-gray-500 max-w-2xl mx-auto mt-4 text-sm">
+                        우리는 매일 수많은 선택의 갈림길에 섭니다. 그 선택들의 집합이 바로 '나'라는 사람을 정의합니다.
+                        바이브체크의 다양한 심리 테스트를 통해 무의식 속의 나를 만나고, 더 나은 삶의 방향을 찾아보세요.
                     </p>
                 </div>
 
