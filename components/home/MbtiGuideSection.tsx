@@ -1,3 +1,4 @@
+import Link from "next/link";
 
 export function MbtiGuideSection() {
     const traits = [
@@ -61,7 +62,13 @@ export function MbtiGuideSection() {
                     ))}
                 </div>
 
-                <div className="mt-8 text-center">
+                <div className="mt-8 text-center space-y-3">
+                    <Link
+                        href="/mbti"
+                        className="inline-block bg-indigo-600 text-white font-bold px-6 py-2.5 rounded-full text-sm hover:bg-indigo-700 transition-colors"
+                    >
+                        16가지 MBTI 유형별 특징 자세히 보기 →
+                    </Link>
                     <p className="text-xs text-center text-gray-400 bg-gray-50 py-3 rounded-lg">
                         * 본 가이드는 MBTI 이론의 일반적인 경향성을 설명하며, 개인마다 차이가 있을 수 있습니다.
                     </p>

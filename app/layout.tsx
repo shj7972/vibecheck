@@ -9,11 +9,15 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   metadataBase: new URL('https://vibecheck.page'),
   title: {
-    default: "VibeCheck - 나를 찾는 트렌디한 심리테스트",
+    default: "무료 MBTI 테스트 | 심리테스트 모음 - VibeCheck",
     template: "%s | VibeCheck"
   },
-  description: "트렌디한 심리테스트 모음. 좀비 생존 유형부터 퍼스널 컬러, MBTI까지 다양한 테스트로 나의 바이브(Vibe)를 확인해보세요!",
-  keywords: ["심리테스트", "MBTI", "성격테스트", "VibeCheck", "바이브체크", "무료테스트", "심테"],
+  description: "무료 MBTI 성격 유형 테스트 및 다양한 심리테스트 모음. 퍼스널 컬러, 좀비 생존, 연애 유형, 꼰대 테스트 등 회원가입 없이 즉시 이용하세요.",
+  keywords: [
+    "무료 MBTI 테스트", "MBTI 성격 유형", "심리테스트", "성격 테스트",
+    "16가지 성격유형", "MBTI 검사", "무료 심리테스트", "온라인 심리테스트",
+    "VibeCheck", "바이브체크", "퍼스널 컬러", "연애 MBTI"
+  ],
   authors: [{ name: "VibeCheck Team" }],
   creator: "VibeCheck",
   publisher: "VibeCheck",
@@ -27,13 +31,13 @@ export const metadata: Metadata = {
     locale: "ko_KR",
     url: "https://vibecheck.page",
     siteName: "VibeCheck",
-    title: "VibeCheck - 나를 찾는 트렌디한 심리테스트",
-    description: "트렌디한 심리테스트 모음. 좀비 생존 유형부터 퍼스널 컬러, MBTI까지 다양한 테스트로 나의 바이브(Vibe)를 확인해보세요!",
+    title: "무료 MBTI 테스트 | 심리테스트 모음 - VibeCheck",
+    description: "무료 MBTI 성격 유형 테스트 및 다양한 심리테스트 모음. 퍼스널 컬러, 좀비 생존, 연애 유형, 꼰대 테스트 등 회원가입 없이 즉시 이용하세요.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "VibeCheck - 나를 찾는 트렌디한 심리테스트",
-    description: "트렌디한 심리테스트 모음. 좀비 생존 유형부터 퍼스널 컬러, MBTI까지 다양한 테스트로 나의 바이브(Vibe)를 확인해보세요!",
+    title: "무료 MBTI 테스트 | 심리테스트 모음 - VibeCheck",
+    description: "무료 MBTI 성격 유형 테스트 및 다양한 심리테스트 모음. 회원가입 없이 즉시 이용하세요.",
   },
   verification: {
     google: "cnz5bZ2_xuDCfsCEMaJgykEyNZ7AhLNDGToTFQi3e-w",
@@ -44,6 +48,13 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-snippet": -1,
+      "max-image-preview": "large",
+      "max-video-preview": -1,
+    },
   }
 };
 

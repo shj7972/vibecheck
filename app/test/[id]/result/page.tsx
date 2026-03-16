@@ -27,20 +27,23 @@ export async function generateMetadata(
             ? [test.thumbnailUrl]
             : [];
 
+    const pageTitle = `${result.type ? `[${result.type}] ` : ""}${result.title} - ${test.title} 결과`;
+    const pageDescription = `${test.title} 결과: ${result.description} VibeCheck에서 무료로 나의 유형을 알아보세요.`;
+
     return {
-        title: `${result.title} (결과)`,
-        description: `${test.title} 결과: ${result.description}`,
+        title: pageTitle,
+        description: pageDescription,
         openGraph: {
-            title: `${result.title} | ${test.title}`,
-            description: result.description,
+            title: pageTitle,
+            description: pageDescription,
             images: images,
             type: "website",
             url: `https://vibecheck.page/test/${id}/result?type=${type}`,
         },
         twitter: {
             card: "summary_large_image",
-            title: `${result.title} | ${test.title}`,
-            description: result.description,
+            title: pageTitle,
+            description: pageDescription,
             images: images,
         },
         alternates: {

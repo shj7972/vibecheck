@@ -6,17 +6,9 @@ export default function robots(): MetadataRoute.Robots {
     return {
         rules: [
             {
-                userAgent: 'Googlebot',
-                allow: ['/', '/ads.txt'],
-            },
-            {
-                userAgent: 'Mediapartners-Google',
-                allow: ['/', '/ads.txt'],
-            },
-            {
                 userAgent: '*',
                 allow: '/',
-                disallow: '/private/',
+                disallow: ['/private/', '/api/'],
             },
         ],
         sitemap: `${baseUrl}/sitemap.xml`,
