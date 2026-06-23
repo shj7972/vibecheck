@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { GoogleAnalytics } from "@next/third-parties/google";
-import Script from "next/script";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -65,40 +65,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <head>
-        <Script
-          id="adsense-init"
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2947913248390883"
-          crossOrigin="anonymous"
-          strategy="afterInteractive"
-        />
-        {/* 카카오 JavaScript SDK */}
-        <Script
-          id="kakao-sdk"
-          src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.4/kakao.min.js"
-          integrity="sha384-DKYJZ8NLiK8MN4/C5P2dtSmLQ4KwPaoqAfyA/DfmEc1B9dQVhA4JQFNhxKoqcD6"
-          crossOrigin="anonymous"
-          strategy="afterInteractive"
-        />
-        <Script
-          id="kakao-init"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              function initKakao() {
-                if (window.Kakao && !window.Kakao.isInitialized()) {
-                  try {
-                    window.Kakao.init('${process.env.NEXT_PUBLIC_KAKAO_JS_KEY || ""}');
-                  } catch(e) {}
-                }
-              }
-              if (document.readyState === 'complete') { initKakao(); }
-              else { window.addEventListener('load', initKakao); }
-            `,
-          }}
-        />
-      </head>
       <body className={inter.className}>
         <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center p-0 sm:p-4 md:p-8 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]">
           <main className="w-full max-w-md md:max-w-4xl bg-white min-h-screen sm:min-h-[auto] sm:h-full sm:rounded-3xl shadow-2xl flex flex-col overflow-hidden border-gray-100 sm:border relative">
@@ -106,6 +72,12 @@ export default function RootLayout({
           </main>
         </div>
         <GoogleAnalytics gaId="G-HLFXV4C2WN" />
+        {/* AdSense */}
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2947913248390883"
+          crossOrigin="anonymous"
+        />
       </body>
     </html>
   );

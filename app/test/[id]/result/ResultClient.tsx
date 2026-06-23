@@ -42,11 +42,70 @@ export default function ResultClient({ test, result, testId }: ResultClientProps
         setShareMenuOpen(false);
     }, [showToast]);
 
+    // 카카오 SDK 로드 + 초기화 헬퍼 (버튼 클릭 시 동적 처리)
+    const ensureKakaoReady = useCallback((): Promise<boolean> => {
+        return new Promise((resolve) => {
+            type KakaoWindow = typeof window & {
+                Kakao?: {
+                    isInitialized: () => boolean;
+                    init: (key: string) => void;
+                    Share: { sendDefault: (opts: object) => void };
+                };
+            };
+            const win = window as KakaoWindow;
+            const JS_KEY = process.env.NEXT_PUBLIC_KAKAO_JS_KEY || "";
+
+            if (!JS_KEY) {
+                resolve(false);
+                return;
+            }
+
+            const tryInit = () => {
+                if (win.Kakao) {
+                    if (!win.Kakao.isInitialized()) {
+                        try { win.Kakao.init(JS_KEY); } catch { /* ignore */ }
+                    }
+                    resolve(win.Kakao.isInitialized());
+                } else {
+                    resolve(false);
+                }
+            };
+
+            if (win.Kakao) {
+                tryInit();
+            } else {
+                // SDK가 아직 로드 안 됐으면 동적으로 로드
+                const existing = document.getElementById("kakao-sdk-dynamic");
+                if (!existing) {
+                    const script = document.createElement("script");
+                    script.id = "kakao-sdk-dynamic";
+                    script.src = "https://t1.kakaocdn.net/kakao_js_sdk/2.7.4/kakao.min.js";
+                    script.onload = tryInit;
+                    script.onerror = () => resolve(false);
+                    document.head.appendChild(script);
+                } else {
+                    // 이미 로드 요청 중 — 짧게 대기
+                    let attempts = 0;
+                    const poll = setInterval(() => {
+                        attempts++;
+                        if (win.Kakao) { clearInterval(poll); tryInit(); }
+                        else if (attempts > 20) { clearInterval(poll); resolve(false); }
+                    }, 100);
+                }
+            }
+        });
+    }, []);
+
     // 카카오 공유
-    const handleKakaoShare = useCallback(() => {
-        const kakao = (window as typeof window & { Kakao?: { isInitialized: () => boolean; Share: { sendDefault: (opts: object) => void } } }).Kakao;
-        if (kakao && kakao.isInitialized()) {
-            kakao.Share.sendDefault({
+    const handleKakaoShare = useCallback(async () => {
+        const ready = await ensureKakaoReady();
+        type KakaoWindow = typeof window & {
+            Kakao?: { Share: { sendDefault: (opts: object) => void } };
+        };
+        const win = window as KakaoWindow;
+
+        if (ready && win.Kakao) {
+            win.Kakao.Share.sendDefault({
                 objectType: "feed",
                 content: {
                     title: `[VibeCheck] ${result.title}`,
@@ -75,11 +134,12 @@ export default function ResultClient({ test, result, testId }: ResultClientProps
                 ],
             });
         } else {
-            // 카카오 SDK 미로드 시 링크 복사 fallback
+            // fallback: 링크 복사
             handleCopyLink();
+            showToast("💛 카카오 공유 준비 중 — 링크를 복사했습니다!");
         }
         setShareMenuOpen(false);
-    }, [result, test, testId, handleCopyLink]);
+    }, [ensureKakaoReady, result, test, testId, handleCopyLink, showToast]);
 
     // 트위터/X 공유
     const handleTwitterShare = useCallback(() => {
