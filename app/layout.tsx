@@ -73,6 +73,31 @@ export default function RootLayout({
           crossOrigin="anonymous"
           strategy="afterInteractive"
         />
+        {/* 카카오 JavaScript SDK */}
+        <Script
+          id="kakao-sdk"
+          src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.4/kakao.min.js"
+          integrity="sha384-DKYJZ8NLiK8MN4/C5P2dtSmLQ4KwPaoqAfyA/DfmEc1B9dQVhA4JQFNhxKoqcD6"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
+        <Script
+          id="kakao-init"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              function initKakao() {
+                if (window.Kakao && !window.Kakao.isInitialized()) {
+                  try {
+                    window.Kakao.init('${process.env.NEXT_PUBLIC_KAKAO_JS_KEY || ""}');
+                  } catch(e) {}
+                }
+              }
+              if (document.readyState === 'complete') { initKakao(); }
+              else { window.addEventListener('load', initKakao); }
+            `,
+          }}
+        />
       </head>
       <body className={inter.className}>
         <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center p-0 sm:p-4 md:p-8 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]">

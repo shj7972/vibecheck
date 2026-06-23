@@ -21,22 +21,16 @@ export async function generateMetadata(
 
     const result = test.results.find((r) => r.type === type) || test.results[0];
 
-    const images = result.imageUrl
-        ? [result.imageUrl]
-        : test.thumbnailUrl
-            ? [test.thumbnailUrl]
-            : [];
-
     const pageTitle = `${result.type ? `[${result.type}] ` : ""}${result.title} - ${test.title} 결과`;
     const pageDescription = `${test.title} 결과: ${result.description} VibeCheck에서 무료로 나의 유형을 알아보세요.`;
-
+    const ogImageUrl = `https://vibecheck.page/api/og?testId=${id}&type=${encodeURIComponent(type || "")}&title=${encodeURIComponent(result.title)}&desc=${encodeURIComponent(result.description.slice(0, 80))}`;
     return {
         title: pageTitle,
         description: pageDescription,
         openGraph: {
             title: pageTitle,
             description: pageDescription,
-            images: images,
+            images: [{ url: ogImageUrl, width: 1200, height: 630, alt: result.title }],
             type: "website",
             url: `https://vibecheck.page/test/${id}/result?type=${type}`,
         },
@@ -44,7 +38,7 @@ export async function generateMetadata(
             card: "summary_large_image",
             title: pageTitle,
             description: pageDescription,
-            images: images,
+            images: [ogImageUrl],
         },
         alternates: {
             canonical: `https://vibecheck.page/test/${id}/result?type=${type}`,
